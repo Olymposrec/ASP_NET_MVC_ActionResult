@@ -1,0 +1,49 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script src="~/Scripts/jquery-3.0.0.min.js"></script>
+    <title>Homepage3</title>
+    <script>
+        alert('JSON Result Örneği');
+    </script>
+</head>
+<body>
+    <div> 
+        <h2>Homepage3</h2>
+        <hr />
+
+    </div>
+    <div>
+        <input type="button"
+ id="btnJsonResult" value="Veri Getir" />  
+    
+    </div>
+    <script>
+        $(function () {
+            $("#btnJsonResult").click(
+                function () {
+                    $.ajax({
+                        type: "POST",
+                        url: "/Homepage/Homepage4",
+                        contentType: "application/json;charset=utf-8",
+                        dataType: "json",
+                        success: function (e) {
+                            alert(e.ID);
+                            alert(e.Name);
+                            alert(e.Price);
+                            alert(e.Description);
+
+                        }
+                    });
+                });
+        });
+    </script>
+</body>
+</html>

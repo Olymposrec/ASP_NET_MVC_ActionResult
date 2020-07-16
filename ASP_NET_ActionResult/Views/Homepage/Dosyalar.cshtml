@@ -1,0 +1,28 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Dosyalar</title>
+    <script>
+        alert('FilePathResult/FileStreamResult Örneği');
+    </script>
+</head>
+<body>
+    <div> 
+        <h2>DOSYALAR</h2>
+        <hr />
+    </div>
+    <div>
+        @Html.ActionLink("PDF İndir!","PdfDosyaIndir","Homepage")
+    </div>
+    <div>
+        @Html.ActionLink("Text Dosya İndir!","MetinDosyasiIndir","Homepage")
+    </div>
+</body>
+</html>

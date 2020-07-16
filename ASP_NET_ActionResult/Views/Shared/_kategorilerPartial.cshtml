@@ -1,0 +1,21 @@
+﻿@{
+    List<string> Kategoriler = new List<string>()
+{
+        "Teknoloji",
+        "Araçlar",
+        "Temizlik",
+        "Gıda",
+        "Giyim"
+    };
+}
+<ul class="list-group">
+    @foreach (string kategori in Kategoriler)
+    {
+        <li class="list-group-item">
+            <a href="/Home6/Kategor?adi=@kategori">
+                @kategori
+            </a>
+        </li>
+    }
+</ul>
+

@@ -1,0 +1,48 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Homepage5</title>
+    <script>
+        alert('RedirectToRouteResult Örneği');
+    </script>
+</head>
+<body>
+    <div> 
+        <h2>Homepage5</h2>
+        <hr />
+
+    </div>
+    <div>
+        @using (Html.BeginForm())
+        {
+            @Html.TextBox("ad", "", new { placeholder = "Adınız" }) <br />
+            @Html.TextBox("soyad", "", new { placeholder = "SoyAdınız" })
+            <hr />
+            <button type="submit">Kaydet</button>
+        }
+    </div>
+    <div>
+        <hr />
+    </div>
+    <div>
+        @if(ViewBag.Liste!=null)
+        {
+            <ul>
+                @foreach (string veri in (List<string>)ViewBag.Liste)
+                {
+                <li>
+                    @veri
+                </li>
+                }
+            </ul>
+        }
+    </div>
+</body>
+</html>
